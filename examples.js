@@ -1,8 +1,18 @@
 import * as chalk from 'chalk';
-import  {Banner, Spinner, Sparkline, Progress, Line, LineBuffer} from './src/index'
+import * as os  from 'os';
+import  {Banner, Gauge, Spinner, Sparkline, Progress, Line, LineBuffer} from './src/index'
 require('draftlog').into(console);
 
 
+/********************/
+
+var total = os.totalmem();
+var free = os.freemem();
+var used = total - free;
+var human = Math.ceil(used / 1000000) + ' MB';
+console.log('' + new Gauge(used, total, 20, total * 0.8, chalk.bold.grey(human)));
+
+/********************/
 
 const reqsPerSec = [10,12,3,7,12,9,23,10,9,19,16,18,12,12];
 

@@ -9,11 +9,6 @@ Command Line UI components for Node.js
 :: [Test](#test)
 :: [Build](#build)
 
-### Dependencies  
-
-1. chalk
-2. draftlog
-
 ### Setup
 > Installing this module in your project
 ```bash
@@ -25,9 +20,11 @@ npm install nodeui
 ### Usage 
 ```ts
 import * as chalk from 'chalk';
-import  {Spinner, Gauge, Sparkline, Progress, Line, LineBuffer} from 'nodeui'
+import  {Banner, Gauge, Spinner, Sparkline, Progress, Line, LineBuffer} from 'nodeui'
 (async () => {
     try {
+        const banner = new Banner('  Node UI is Awesome!    See what you can build with this module   ');
+    
         let spinner = new Spinner('initial message');
         spinner.start();
         await sleep(800);

@@ -2,8 +2,28 @@
   "name": "nodeui",
   "version": "0.1.0",
   "description": "Command Line UI components for Node.js",
+  "keywords": [
+    "UI",
+    "cli",
+    "node",
+    "Banner",
+    "Spinner",
+    "Progress",
+    "Sparkline"
+  ],
   "main": "index.js",
-  "author": "Sumanth Chinthagunta",
+  "author": {
+    "name": "Sumanth Chinthagunta",
+    "email": "xmlking+git@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmlking/nodeui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xmlking/nodeui/issues"
+  },
+  "homepage": "https://github.com/xmlking/nodeui#readme",
   "license": "MIT",
   "scripts": {
     "prebuild": "node tools/delete.js",
