@@ -1,0 +1,26 @@
+{
+  "name": "nodeui",
+  "version": "0.1.0",
+  "description": "Command Line UI components for Node.js",
+  "main": "index.js",
+  "author": "Sumanth Chinthagunta",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "node tools/delete.js",
+    "build": "tsc --p src/tsconfig.app.json",
+    "prepublishOnly": "yarn run build && node tools/copy.js",
+    "test": "ts-node test.ts"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "draftlog": "^1.0.12"
+  },
+  "devDependencies": {
+    "@types/chalk": "^0.4.31",
+    "@types/jasmine": "^2.5.47",
+    "@types/node": "^7.0.12",
+    "fs-p": "^2.0.0",
+    "jasmine": "^2.5.3",
+    "jasmine-spec-reporter": "^3.2.0"
+  }
+}
