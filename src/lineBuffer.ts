@@ -1,6 +1,6 @@
 import * as chalk from "chalk";
 
-interface UserOptions {
+export interface UserOptions {
     x?: number
     y?: number
     width?: string | number

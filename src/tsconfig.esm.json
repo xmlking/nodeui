@@ -1,8 +1,8 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "../dist/lib",
+    "module": "es2015",
+    "outDir": "../dist/esm",
     "declaration": true,
     "allowJs": false
   },

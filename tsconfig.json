@@ -3,7 +3,7 @@
     "module": "commonjs",
     "target": "ESNext",
     "noImplicitAny": false,
-    "sourceMap": false,
+    "sourceMap": true,
     "allowJs": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,

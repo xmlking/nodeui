@@ -1,6 +1,6 @@
 {
   "name": "nodeui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command Line UI components for Node.js",
   "keywords": [
     "UI",
@@ -27,7 +27,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "node tools/delete.js",
-    "build": "tsc --p src/tsconfig.app.json",
+    "build": "tsc --p src/tsconfig.app.json && tsc --p src/tsconfig.esm.json",
     "prepublishOnly": "yarn run build && node tools/copy.js",
     "test": "ts-node test.ts"
   },
