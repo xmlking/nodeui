@@ -3,12 +3,12 @@ import * as chalk from "chalk";
 export class Line {
     private lineContent = "";
 
-    constructor(public defaultBuffer) {
+    constructor(public defaultBuffer?) {
     }
 
 
     // Put text in the line
-    text(text, styles) {
+    text(text, styles?) {
         if(styles) {
             styles.forEach(function (element) {
                 text = element(text);
@@ -19,7 +19,7 @@ export class Line {
     };
 
     // Put padding in the line.
-    padding(width, styles) {
+    padding(width, styles?) {
         let padding = Array(width + 1).join(" ");
         if(styles) {
             styles.forEach(function (element) {
@@ -31,7 +31,7 @@ export class Line {
     };
 
     // Put padding in the line.
-    column(text, columnWidth, textStyles) {
+    column(text, columnWidth, textStyles?) {
         let textWidth = chalk.stripColor(text).length;
 
         if (textWidth > columnWidth) {
@@ -48,7 +48,7 @@ export class Line {
     }
 
     // Fill the rest of the width of the line with space.
-    fill(styles) {
+    fill(styles?) {
         let fillWidth = process.stdout.columns - chalk.stripColor(this.lineContent).length;
         if (fillWidth > 0)
             this.padding(fillWidth, styles);
@@ -56,7 +56,7 @@ export class Line {
     }
 
     // Store a line in a line buffer to be output later.
-    store(buffer) {
+    store(buffer?) {
         if (typeof buffer == 'undefined') {
             if (typeof this.defaultBuffer == 'undefined')
                 process.stderr.write('Attempt to store a line in a line buffer, without providing a line buffer to store that line in.');

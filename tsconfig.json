@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "ESNext",
+    "target": "es2015",
     "noImplicitAny": false,
     "sourceMap": true,
     "allowJs": true,
@@ -11,10 +11,11 @@
     "outDir": "dist"
   },
   "lib" : [
-    "ESNext"
+    "esnext"
   ],
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "examples.ts"
   ],
   "exclude": [
     "dist",

@@ -1,6 +1,6 @@
 {
   "name": "nodeui",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Command Line UI components for Node.js",
   "keywords": [
     "UI",
@@ -27,7 +27,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "node tools/delete.js",
-    "build": "tsc --p src/tsconfig.app.json && tsc --p src/tsconfig.esm.json",
+    "build": "tsc --p src/tsconfig.app.json --lib esnext && tsc --p src/tsconfig.esm.json --lib esnext",
     "prepublishOnly": "yarn run build && node tools/copy.js",
     "test": "ts-node test.ts"
   },
@@ -39,8 +39,10 @@
     "@types/chalk": "^0.4.31",
     "@types/jasmine": "^2.5.47",
     "@types/node": "^7.0.12",
+    "core-js": "^2.4.1",
     "fs-p": "^2.0.0",
     "jasmine": "^2.5.3",
-    "jasmine-spec-reporter": "^3.2.0"
+    "jasmine-spec-reporter": "^4.0.0",
+    "typescript": "^2.3.0"
   }
 }

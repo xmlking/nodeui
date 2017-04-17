@@ -39,6 +39,37 @@ import  {Banner, Gauge, Spinner, Sparkline, Progress, Line, LineBuffer} from 'no
 })();
 ```
 
+```ts
+async function* getProgressSlowly() {
+    let progress = 0;
+
+    while (progress <= 100) {
+        await sleep(50);
+        progress += Math.round(Math.random() * 5);
+        if (progress >= 100) {
+            yield 100;
+        } else {
+            yield progress;
+        }
+    }
+}
+
+async function startDownload() {
+    let myProgress = new Progress(50, chalk.green('Finished download!'));
+
+    for await (let progress of getProgressSlowly()) {
+        myProgress.update(progress, 100)
+    }
+}
+
+(async () => {
+    console.log('Starting downloads...');
+    for (let i = 0; i < 10; i ++) {
+        startDownload()
+    }
+})();
+```
+
 ## Developer Setup
 
 ### Setup
@@ -52,7 +83,8 @@ yarn run build
 ```
 ### Examples
 ```bash
-ts-node examples.js
+# ts-node examples.js
+ts-node --disableWarnings  examples.ts
 ```
 
 ### Test
