@@ -1,5 +1,8 @@
 Node UI
 =======
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][downloads-image]][downloads-url]
+
 Command Line UI components for Node.js
 
 > This module is based on [clui](https://github.com/nathanpeck/clui) and [draftlog](https://github.com/ivanseidel/node-draftlog)
@@ -98,3 +101,9 @@ yarn run prepublishOnly
 cd dist
 npm publish
 ```
+
+
+[npm-image]: https://img.shields.io/npm/v/nodeui.svg?style=flat
+[npm-url]: https://npmjs.org/package/nodeui
+[downloads-image]: https://img.shields.io/npm/dm/nodeui.svg?style=flat
+[downloads-url]: https://npmjs.org/package/nodeui
