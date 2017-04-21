@@ -27,7 +27,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "node tools/delete.js",
-    "build": "tsc --p src/tsconfig.app.json --lib esnext && tsc --p src/tsconfig.esm.json --lib esnext",
+    "build": "tsc --p src/tsconfig.app.json && tsc --p src/tsconfig.esm.json",
     "prepublishOnly": "yarn run build && node tools/copy.js",
     "test": "ts-node test.ts"
   },

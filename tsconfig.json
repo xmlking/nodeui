@@ -3,16 +3,17 @@
     "module": "commonjs",
     "target": "es2015",
     "noImplicitAny": false,
-    "sourceMap": true,
+    "sourceMap": false,
     "allowJs": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "lib" : [
+      "esnext"
+    ]
   },
-  "lib" : [
-    "esnext"
-  ],
+
   "include": [
     "src/**/*.ts",
     "examples.ts"
